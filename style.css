@@ -211,3 +211,27 @@ margin:auto;
     }
 
 }
+
+/* Center Team Section */
+.team-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    justify-content: center;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
