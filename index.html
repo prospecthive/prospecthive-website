@@ -15,6 +15,7 @@
 <meta name="twitter:title" content="ProspectHive | B2B Lead Generation Agency">
 <meta name="twitter:description" content="We help businesses generate verified B2B leads through LinkedIn prospecting, email research, appointment setting and data enrichment.">
 <meta name="twitter:image" content="https://prospecthive.github.io/prospecthive-website/logo.png">
+<link rel="canonical" href="https://prospecthive.github.io/prospecthive-website/">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,6 +127,17 @@ h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:700;line-height:1.08;letter-
 .steps h3{font-size:1.25rem;font-weight:700}
 .steps p{margin-top:8px;color:var(--muted);font-size:1rem}
 
+/* faq */
+.faq{border-top:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
+.qa{border-top:2px solid var(--ink)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{cursor:pointer;list-style:none;position:relative;padding:20px 44px 20px 0;font-weight:700;font-size:1.15rem;line-height:1.35}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font:500 1.5rem/1 var(--mono)}
+.qa details[open] summary::after{content:"\2212"}
+.qa details p{padding:0 0 22px;max-width:60ch;color:var(--muted)}
+
 /* founders */
 .founders{border-top:1px solid var(--line)}
 .people{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:32px}
@@ -153,7 +165,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
 
 /* responsive */
 @media (max-width:960px){
-  .hero-grid,.agency-grid,.contact-grid{grid-template-columns:minmax(0,1fr);gap:44px}
+  .hero-grid,.agency-grid,.contact-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:44px}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sheet{box-shadow:7px 7px 0 var(--amber)}
 }
@@ -270,6 +282,45 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
     </div>
   </section>
 
+  <section class="band faq" id="faq">
+    <div class="wrap faq-grid">
+      <div>
+        <h2>Common questions</h2>
+        <p class="sec-intro">Short answers about how our lists, checks and free samples work.</p>
+      </div>
+      <div class="qa">
+        <details>
+          <summary>What is a B2B prospect list?</summary>
+          <p>A B2B prospect list is a file of businesses and the decision makers at them, with job titles and contact details, built for a specific audience. Sales teams and agencies load it into their outreach tools or CRM to contact the right people.</p>
+        </details>
+        <details>
+          <summary>What does ProspectHive do?</summary>
+          <p>ProspectHive is a B2B lead generation agency. We research prospects, find and check business emails, do LinkedIn prospecting, clean CRM records, and help book appointments for sales teams.</p>
+        </details>
+        <details>
+          <summary>How do you verify contacts?</summary>
+          <p>We confirm each person, their role and their email address before delivery. Contacts that fail these checks are removed from the list, so you only receive records that passed.</p>
+        </details>
+        <details>
+          <summary>What format do I receive the list in?</summary>
+          <p>Lists come as an Excel or CSV file, or we can load them directly into your CRM.</p>
+        </details>
+        <details>
+          <summary>Can I get a free sample first?</summary>
+          <p>Yes. Tell us who you want to reach and we will send a free sample of 25 contacts built for that audience, with no commitment.</p>
+        </details>
+        <details>
+          <summary>Do you work with lead generation and cold email agencies?</summary>
+          <p>Yes. We work as a white-label research partner. You send the ideal customer profile for a client, and we return a checked list you can send under your own brand.</p>
+        </details>
+        <details>
+          <summary>How do I get started?</summary>
+          <p>Use the form on this page, email prospecthive.agency@gmail.com, or message us on WhatsApp. Share your target industry, job titles, company size and country.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="band founders" id="about">
     <div class="wrap">
       <h2>The founders</h2>
@@ -347,6 +398,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
       <a href="#agencies">For agencies</a>
       <a href="#process">How we work</a>
       <a href="#about">Founders</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <small>&copy; 2026 ProspectHive</small>
@@ -354,7 +406,166 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"ProspectHive","url":"https://prospecthive.github.io/prospecthive-website/","email":"prospecthive.agency@gmail.com"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://prospecthive.github.io/prospecthive-website/#org",
+      "name": "ProspectHive",
+      "url": "https://prospecthive.github.io/prospecthive-website/",
+      "logo": "https://prospecthive.github.io/prospecthive-website/logo.png",
+      "email": "prospecthive.agency@gmail.com",
+      "description": "ProspectHive is a B2B lead generation agency that builds verified prospect lists through LinkedIn prospecting, email research, appointment setting and data enrichment.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "prospecthive.agency@gmail.com",
+        "telephone": "+917046191995"
+      },
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Akash Pal",
+          "jobTitle": "Co-Founder and Managing Director",
+          "sameAs": "https://www.linkedin.com/in/pal-aakash"
+        },
+        {
+          "@type": "Person",
+          "name": "Aparna Gaikwad",
+          "jobTitle": "Co-Founder and Business Director",
+          "sameAs": "https://www.linkedin.com/in/aparna-g-93b48334b"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://prospecthive.github.io/prospecthive-website/#service",
+      "name": "B2B lead generation and prospect research",
+      "serviceType": "B2B lead generation",
+      "provider": {
+        "@id": "https://prospecthive.github.io/prospecthive-website/#org"
+      },
+      "url": "https://prospecthive.github.io/prospecthive-website/",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ProspectHive services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lead generation",
+              "description": "Targeted B2B prospect lists built around industry, location and company size."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Email research",
+              "description": "Business emails found and checked so campaigns reach inboxes and bounce less."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "LinkedIn prospecting",
+              "description": "Founders, CEOs and decision makers found through hands-on LinkedIn research."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Appointment setting",
+              "description": "Qualified meetings booked for sales teams with potential customers."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CRM enrichment",
+              "description": "CRM records cleaned, updated and organised for better outreach."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data research",
+              "description": "Custom business research and databases built to answer a specific question."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prospecthive.github.io/prospecthive-website/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a B2B prospect list?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A B2B prospect list is a file of businesses and the decision makers at them, with job titles and contact details, built for a specific audience. Sales teams and agencies load it into their outreach tools or CRM to contact the right people."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does ProspectHive do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProspectHive is a B2B lead generation agency. We research prospects, find and check business emails, do LinkedIn prospecting, clean CRM records, and help book appointments for sales teams."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you verify contacts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We confirm each person, their role and their email address before delivery. Contacts that fail these checks are removed from the list, so you only receive records that passed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What format do I receive the list in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lists come as an Excel or CSV file, or we can load them directly into your CRM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a free sample first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Tell us who you want to reach and we will send a free sample of 25 contacts built for that audience, with no commitment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with lead generation and cold email agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work as a white-label research partner. You send the ideal customer profile for a client, and we return a checked list you can send under your own brand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the form on this page, email prospecthive.agency@gmail.com, or message us on WhatsApp. Share your target industry, job titles, company size and country."
+          }
+        }
+      ]
+    }
+  ]
+}
 </script>
 
 <script>
