@@ -1,0 +1,21 @@
+audience,name,role,company,email,check_result,removal_reason
+"SaaS founders, USA",Maya Ellison,Founder and CEO,Tessellate Labs,maya@tessellatelabs.example,verified,
+"SaaS founders, USA",Dev Rangan,Co-founder,Loopwise,dev@loopwise.example,verified,
+"SaaS founders, USA",Carla Voss,CEO,Pinegate Software,carla.voss@pinegate.example,verified,
+"SaaS founders, USA",Tom Brandt,Head of Sales,Fieldnote,t.brandt@fieldnote.example,verified,
+"SaaS founders, USA",Ruth Aiken,Founder,Quillstack,ruth@quillstack.example,removed,mailbox not found
+"Recruiters, Australia",Hannah Doyle,Managing Director,Southbank Talent,hannah@southbanktalent.example,verified,
+"Recruiters, Australia",Liam Cosgrove,Head of Delivery,Ridgeway Recruit,liam.c@ridgewayrecruit.example,verified,
+"Recruiters, Australia",Priya Menon,Director,Harbour Staffing,priya@harbourstaffing.example,verified,
+"Recruiters, Australia",Jack Whitlam,Owner,Outback Search,jack@outbacksearch.example,verified,
+"Recruiters, Australia",Sophie Tran,Talent Lead,Kestrel People,sophie@kestrelpeople.example,removed,left the company
+"Manufacturers, UK",Oliver Pryce,Procurement Director,Calder Fabrication,oliver.pryce@calderfab.example,verified,
+"Manufacturers, UK",Beth Hargreaves,Managing Director,Northgate Components,beth@northgatecomp.example,verified,
+"Manufacturers, UK",Imran Sheikh,Head of Supply,Pennine Plastics,imran@pennineplastics.example,verified,
+"Manufacturers, UK",Gavin Moss,Operations Director,Tamar Castings,gavin.moss@tamarcastings.example,verified,
+"Manufacturers, UK",Elise Warren,Buyer,Hollin Engineering,e.warren@hollineng.example,removed,duplicate entry
+"Agency owners, Australia",Nina Castellano,Founder,Brightside Digital,nina@brightsidedigital.example,verified,
+"Agency owners, Australia",Ben Hartigan,Director,Tidal Growth,ben@tidalgrowth.example,verified,
+"Agency owners, Australia",Zoe Kapoor,CEO,Lumen Outbound,zoe@lumenoutbound.example,verified,
+"Agency owners, Australia",Mitch Aldous,Managing Partner,Fenwick Media,mitch@fenwickmedia.example,verified,
+"Agency owners, Australia",Clara Nguyen,Head of Growth,Plover Agency,clara@ploveragency.example,removed,mailbox not found
