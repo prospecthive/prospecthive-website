@@ -127,6 +127,19 @@ h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:700;line-height:1.08;letter-
 .steps h3{font-size:1.25rem;font-weight:700}
 .steps p{margin-top:8px;color:var(--muted);font-size:1rem}
 
+[hidden]{display:none!important}
+
+/* packages */
+.packs{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);border-left:1px solid var(--line)}
+.pack{padding:28px 26px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.pack.first{background:var(--amber-soft)}
+.pack h3{font-size:1.3rem;font-weight:700;letter-spacing:-.015em}
+.pack .size{font:500 .9rem/1.3 var(--mono);color:var(--muted)}
+.pack .price{font-size:1.6rem;font-weight:800;letter-spacing:-.02em}
+.pack p{color:var(--muted);font-size:1rem}
+.pack .btn{margin-top:auto;align-self:flex-start}
+.pack-note{margin-top:20px;max-width:62ch;font-size:.95rem;color:var(--muted)}
+
 /* faq */
 .faq{border-top:1px solid var(--line)}
 .faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
@@ -170,6 +183,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
   .sheet{box-shadow:7px 7px 0 var(--amber)}
 }
 @media (max-width:720px){
+  .packs{grid-template-columns:minmax(0,1fr)}
   .nav{display:none}
   .band{padding:60px 0}
   .hero{padding:36px 0 64px}
@@ -197,6 +211,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
       <a href="#services">Services</a>
       <a href="#agencies">For agencies</a>
       <a href="#process">How we work</a>
+      <a href="#packages">Packages</a>
       <a href="#about">Founders</a>
     </nav>
     <a class="btn btn-sm" href="#contact">Get 25 contacts free</a>
@@ -213,6 +228,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
         <div class="cta-row">
           <a class="btn" href="#contact">Get 25 contacts free</a>
           <a class="link" href="#process">See how a list is made</a>
+          <a class="link" href="#contact" data-booking hidden>Book a 15-minute call</a>
         </div>
         <p class="fine">For sales teams and agencies. No commitment.</p>
       </div>
@@ -234,6 +250,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
         </div>
         <noscript><p class="sheet-note">Turn on JavaScript to see the interactive sample sheet.</p></noscript>
         <p class="sheet-note">Every name and company above is made up. Your sample is built from real, researched contacts for the audience you choose.</p>
+        <p class="sheet-note" style="margin-top:10px"><a class="link" href="sample-list.csv" download>Download this fictional sample as a CSV file</a></p>
       </div>
     </div>
   </section>
@@ -279,6 +296,37 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
         <li><h3>Verify</h3><p>We confirm each person, their role and their email address. Contacts that fail are removed.</p></li>
         <li><h3>Deliver</h3><p>You receive the list in Excel, CSV or directly in your CRM.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="band" id="packages">
+    <div class="wrap">
+      <h2>Ways to start</h2>
+      <p class="sec-intro">Begin with a free sample, then move to the list size you need.</p>
+      <div class="packs">
+        <div class="pack first">
+          <h3>Free sample</h3>
+          <span class="size">25 contacts</span>
+          <span class="price">Free</span>
+          <p>One audience of your choice, researched and checked the same way as a paid list.</p>
+          <a class="btn" href="#contact">Ask for the sample</a>
+        </div>
+        <div class="pack">
+          <h3>Pilot list</h3>
+          <span class="size">100 verified contacts</span>
+          <span class="price">Get a quote</span>
+          <p>A first paid list for one audience, so you can test the results before ordering more.</p>
+          <a class="btn" href="#contact">Get a quote</a>
+        </div>
+        <div class="pack">
+          <h3>Custom project</h3>
+          <span class="size">Your brief</span>
+          <span class="price">Get a quote</span>
+          <p>Larger lists, CRM enrichment, LinkedIn research or ongoing work for your team or agency.</p>
+          <a class="btn" href="#contact">Get a quote</a>
+        </div>
+      </div>
+      <p class="pack-note">Price depends on list size, seniority of the roles and countries. We share the price before any work starts.</p>
     </div>
   </section>
 
@@ -354,6 +402,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
         <div class="direct">
           <a href="mailto:prospecthive.agency@gmail.com">prospecthive.agency@gmail.com</a>
           <a href="https://wa.me/917046191995" rel="noopener">Chat on WhatsApp</a>
+          <a href="#contact" data-booking hidden>Book a 15-minute call</a>
         </div>
       </div>
 
@@ -379,6 +428,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
           <textarea id="f-brief" name="brief" placeholder="Industry, job titles, company size, country"></textarea>
           <span class="hint">The more specific you are, the better the sample.</span>
         </label>
+        <input type="checkbox" id="f-bot" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
         <button class="btn" type="submit">Send request</button>
         <p class="form-msg" id="msg" role="status"></p>
       </form>
@@ -400,6 +450,7 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
       <a href="#about">Founders</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
     <small>&copy; 2026 ProspectHive</small>
   </div>
@@ -570,6 +621,12 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
 
 <script>
 (function () {
+  /* SETTINGS: paste your keys here once. Leave empty to use the simple email fallback. */
+  var CONFIG = {
+    formKey: "",     /* free access key from web3forms.com, so requests land in your Gmail */
+    bookingUrl: ""   /* your Calendly or Cal.com link, shows a "Book a 15-minute call" link */
+  };
+
   var SETS = [
     { label: "SaaS founders, USA", rows: [
       ["Maya Ellison", "Founder and CEO", "Tessellate Labs", "maya@tessellatelabs.example", null],
@@ -680,11 +737,29 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
     a.addEventListener("click", function () { topic.value = "White-label research for my agency"; });
   });
 
-  /* enquiry form opens the visitor's email app with the request filled in */
+  /* booking link: only shown when CONFIG.bookingUrl is set */
+  if (CONFIG.bookingUrl) {
+    document.querySelectorAll("[data-booking]").forEach(function (a) {
+      a.href = CONFIG.bookingUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.hidden = false;
+    });
+  }
+
+  /* enquiry form */
   var form = document.getElementById("enquiry");
   var msg = document.getElementById("msg");
+  var sendBtn = form.querySelector("button[type=submit]");
+
+  function openMail(subject, body) {
+    window.location.href = "mailto:prospecthive.agency@gmail.com?subject=" +
+      encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (document.getElementById("f-bot").checked) return;
     var name = document.getElementById("f-name").value.trim();
     var email = document.getElementById("f-email").value.trim();
     var company = document.getElementById("f-company").value.trim();
@@ -696,9 +771,43 @@ footer{padding:36px 0;border-top:2px solid var(--ink)}
     var subject = topic.value + (company ? " - " + company : "");
     var body = "Name: " + name + "\nWork email: " + email + "\nCompany: " + company +
       "\nNeed: " + topic.value + "\n\nWho I want to reach:\n" + brief;
-    msg.textContent = "Your email app should open with this request ready to send. If it does not, write to prospecthive.agency@gmail.com.";
-    window.location.href = "mailto:prospecthive.agency@gmail.com?subject=" +
-      encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+    if (!CONFIG.formKey) {
+      msg.textContent = "Your email app should open with this request ready to send. If it does not, write to prospecthive.agency@gmail.com.";
+      openMail(subject, body);
+      return;
+    }
+
+    sendBtn.disabled = true;
+    msg.textContent = "Sending...";
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        access_key: CONFIG.formKey,
+        subject: "ProspectHive enquiry: " + subject,
+        from_name: "ProspectHive website",
+        name: name,
+        email: email,
+        company: company,
+        need: topic.value,
+        message: brief
+      })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d && d.success) {
+          form.reset();
+          msg.textContent = "Thanks. We received your request and will reply by email.";
+        } else {
+          throw new Error("send failed");
+        }
+      })
+      .catch(function () {
+        msg.textContent = "The form could not be sent, so your email app will open instead.";
+        openMail(subject, body);
+      })
+      .then(function () { sendBtn.disabled = false; });
   });
 })();
 </script>
